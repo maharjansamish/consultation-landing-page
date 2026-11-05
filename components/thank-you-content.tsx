@@ -1,0 +1,9 @@
+"use client";
+
+import { useSearchParams } from "next/navigation";
+
+export function ThankYouContent() {
+  const searchParams = useSearchParams();
+  const isDemo = searchParams.get("demo") === "1";
+  return <main className="thankyou-main"><span className="eyebrow"><span className="eyebrow-line" />A CLEARER NEXT STEP</span><h1>Thank You<span className="accent">.</span></h1><p className="thankyou-copy">{isDemo ? "This is a preview of the thank-you page. Your details have not been sent yet because live form submission is not enabled." : "This is a preview of the thank-you page. No form submission has been made."}</p><div className="video-frame"><iframe src="https://www.youtube-nocookie.com/embed/KNexcq9mtyo" title="Get to know Samish Digital Wave" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen /></div><a className="button button-whatsapp" href="https://wa.me/9779843831005?text=Hi%2C%20I%20just%20submitted%20the%20form%20for%20the%20Free%20Digital%20Marketing%20Consultation.%20I%27d%20like%20to%20know%20the%20next%20steps." target="_blank" rel="noreferrer"><svg className="whatsapp-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none"><path d="M20 11.7a8 8 0 0 1-11.8 7l-4.2 1.1 1.1-4.1A8 8 0 1 1 20 11.7Z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round"/><path d="M9 8.3c.2-.4.4-.4.7-.4h.4c.1 0 .3.1.4.3l.7 1.6c.1.2.1.3 0 .5l-.5.7c-.1.2-.2.3 0 .5.2.4.7 1.1 1.4 1.7.8.7 1.5.9 1.8 1 .2.1.4 0 .5-.1l.7-.8c.2-.2.3-.2.5-.1l1.5.7c.2.1.3.2.3.4 0 .3-.2 1-.7 1.3-.4.4-1 .5-1.6.4-.5-.1-1.2-.3-2-.7-1-.5-1.8-1.2-2.5-1.9-.7-.8-1.2-1.6-1.5-2.3-.3-.7-.4-1.4-.3-1.8.1-.4.4-.8.7-1Z" fill="currentColor"/></svg>CHAT WITH US ON WHATSAPP<span aria-hidden="true">↗</span></a><a className="text-link" href="/">Return to the consultation page <span aria-hidden="true">→</span></a></main>;
+}
